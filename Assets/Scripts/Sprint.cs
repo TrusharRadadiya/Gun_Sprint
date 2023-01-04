@@ -24,9 +24,11 @@ public class Sprint : MonoBehaviour
 
     [Space]
     [SerializeField] private GameObject _followObject;
+    private Vector3 _offset;
 
     private void Awake()
     {
+        _offset = _followObject.transform.position - transform.position;
         _rb = GetComponent<Rigidbody>();
     }
 
@@ -59,6 +61,6 @@ public class Sprint : MonoBehaviour
         var pos = _followObject.transform.position;
         pos.x = transform.position.x;
         pos.z = transform.position.z;
-        _followObject.transform.position = pos;
+        _followObject.transform.position = pos + _offset;
     }
 }
