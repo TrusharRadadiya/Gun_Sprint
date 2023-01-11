@@ -1,4 +1,3 @@
-
 # Gun Sprint
 
 - Gun Sprint is a famous hyper-casual game created by KAYAC Inc.
